@@ -14,6 +14,6 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 
 Data from 2005 to 2017 are retrieved from [data.gov.my](http://www.data.gov.my/) under MOSTI, DOE and KeTSA. The data is licensed under [Creative Commons Attribution](https://opendefinition.org/licenses/cc-by/) and [Open Definition 2.1](https://opendefinition.org/od/2.1/en/).
 
-The data from 2018 to current date are retrieved directly from [APIMS](http://apims.doe.gov.my/public_v2/api_table.html) website. Data might still be under copyright (unclear) but it's *safe to assume* the data will eventually be released under data.
+The data from 2018 to current date are retrieved directly from [APIMS](http://apims.doe.gov.my/public_v2/api_table.html) website. Data might still be under copyright (unclear) but it's *safe to assume* the data will eventually be released under the same license as above.
 
 The web scraping script is licensed under MIT.
