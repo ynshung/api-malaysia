@@ -9,7 +9,7 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 1. Some location may not be available such as the three mobile continuous air quality monitoring station (MCAQM) in Malaysia as its history is not saved in the website.
 2. There are some monitoring station that used to be turned on and now discontinued or vice versa.
 3. There are a few dates that the API failed to retrieve data.
-4. The web scraping script is kinda inefficent...
+4. The web scraping script could be improved further.
 5. Retrieved data is saved under the cache folder. You can unpack the archive to save some time.
 
 ## Sources and Licensing
