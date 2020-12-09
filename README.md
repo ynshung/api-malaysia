@@ -12,6 +12,9 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 4. The web scraping script could be improved further.
 5. Retrieved data is saved under the cache folder. You can unpack the archive to save some time.
 
+## TODO
+* Rewrite web scraping script to continue from current file.
+
 ## Sources and Licensing
 
 Data from 2005 to 2017 are retrieved from [data.gov.my](http://www.data.gov.my/) under MOSTI, DOE and KeTSA. The data is licensed under [Creative Commons Attribution](https://opendefinition.org/licenses/cc-by/) and [Open Definition 2.1](https://opendefinition.org/od/2.1/en/).

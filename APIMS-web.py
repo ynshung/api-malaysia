@@ -74,4 +74,11 @@ while date <= pd.to_datetime('now'):
     #    date -= pd.DateOffset(hours=1)
 
 df2.to_csv('apims-2018-2020.csv',date_format='%Y-%m-%d %H:%M')
+
+with open('apims-2018-2020.csv', 'r') as file :
+  filedata = file.read()
+filedata = filedata.replace('.0', '').replace(',0,0,', ',,,').replace(',0,', ',,')
+with open('apims-2018-2020.csv', 'w') as file:
+  file.write(filedata)
+
 print("Saved! Operation complete.")
