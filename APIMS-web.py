@@ -4,9 +4,14 @@ from urllib import request
 from pathlib import Path
 import re
 
-df2 = pd.DataFrame()
-
-date = pd.to_datetime('2018/01/01 2300', format='%Y/%m/%d %H%M')
+filename = "apims-2018-now.csv"
+try:
+    df2 = pd.read_csv(filename,parse_dates=["Time"],infer_datetime_format=True)
+    df2 = df2.set_index("Time")
+    date = df2.tail(1).index[0]
+except:
+    df2 = pd.DataFrame()
+    date = pd.to_datetime('2018/01/01 0000', format='%Y/%m/%d %H%M')
 
 def returnFile(url=False):
     if url:
@@ -31,7 +36,7 @@ def clean(x):
     except:
         return np.nan
 
-while date <= pd.to_datetime('now'):
+while date < (pd.to_datetime('now')+pd.DateOffset(hours=8)):
     print('Processing ' + returnFile())
     try:
         json = pd.read_json(getJSON())
@@ -66,6 +71,7 @@ while date <= pd.to_datetime('now'):
         else:
             ls[i] = (date-pd.DateOffset(1)).strftime(format='%Y/%m/%d') + ' ' + ls[i]
     df.index = pd.to_datetime(ls)
+    df.index.name = "Time"
 
     df2 = df2.combine_first(df)
     
@@ -73,12 +79,12 @@ while date <= pd.to_datetime('now'):
     #if date == pd.to_datetime('2019/10/24 2300'):
     #    date -= pd.DateOffset(hours=1)
 
-df2.to_csv('apims-2018-2020.csv',date_format='%Y-%m-%d %H:%M')
+df2.to_csv(filename,date_format='%Y-%m-%d %H:%M')
 
-with open('apims-2018-2020.csv', 'r') as file :
+with open(filename, 'r') as file :
   filedata = file.read()
 filedata = filedata.replace('.0', '').replace(',0,0,', ',,,').replace(',0,', ',,')
-with open('apims-2018-2020.csv', 'w') as file:
+with open(filename, 'w') as file:
   file.write(filedata)
 
 print("Saved! Operation complete.")

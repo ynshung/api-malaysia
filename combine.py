@@ -2,7 +2,7 @@ import pandas as pd
 from functools import reduce
 
 df1 = pd.read_csv('apims-2005-2017.csv')
-df2 = pd.read_csv('apims-2018-2020.csv')
+df2 = pd.read_csv('apims-2018-now.csv')
 
 df = reduce(lambda left,right: pd.merge(left,right,how='outer'), [df1,df2])
 
