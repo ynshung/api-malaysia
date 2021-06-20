@@ -13,7 +13,7 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 5. Retrieved data is saved under the cache folder. You can unpack the archive to save some time.
 
 ## TODO
-* Rewrite web scraping script to continue from current file.
+* ✅ Rewrite web scraping script to continue from current file.
 
 ## Sources and Licensing
 
