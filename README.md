@@ -4,8 +4,6 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 
 ## Notes
 
-**Important: After running the python script, prepend the text "Time" in the result file.**
-
 1. Some location may not be available such as the three mobile continuous air quality monitoring station (MCAQM) in Malaysia as its history is not saved in the website.
 2. There are some monitoring station that used to be turned on and now discontinued or vice versa.
 3. There are a few dates that the API failed to retrieve data.
