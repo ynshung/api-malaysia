@@ -12,6 +12,7 @@ Historical data of the Air Pollution Index (API, [wiki](https://en.wikipedia.org
 
 ## TODO
 * ✅ Rewrite web scraping script to continue from current file.
+* Write instructions on how to run script
 
 ## Sources and Licensing
 
